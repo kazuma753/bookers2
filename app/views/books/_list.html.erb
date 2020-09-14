@@ -1,35 +1,33 @@
 <div class="container">
     <div class="row">
     <div class="col-xs-3"> 
-    	<h1>User info</h1>
-<%= attachment_image_tag user, :profile_image,　format: 'jpeg', fallback: "no_image.jpg", size: "100x100" %>
- <table class="table">
+  <h1>User info</h1>
+      <%= attachment_image_tag user, :profile_image,　format: 'jpeg', fallback: "no_image.jpg", size: "100x100" %>
+    <table class="table">
       <tbody><tr></tr> 
-      <tr>
-    	  <th>name</th>
-    	  <th><%= user.name %></th>
-      </tr>
-      <tr>
-        <th>introduction</th>
+        <tr>
+    	    <th>name</th>
+    	    <th><%= user.name %></th>
+        </tr>
+        <tr>
+          <th>introduction</th>
     	  <th><%= user.introduction %></th>
         
     	  
-      </tr>
-</tbody>
-</table>
+        </tr>
+      </tbody>
+    </table>
 <div class="row">
-<%= link_to edit_user_path(user.id), class: 'btn btn-default btn-lg col-xs-12' do 
- %>   
-     <i class="glyphicon glyphicon-wrench"></i>
+<%= link_to edit_user_path(user.id), class: 'btn btn-default btn-lg col-xs-12' do %>   
+  <i class="glyphicon glyphicon-wrench"></i>
 <% end %>
 </div>
 <h1>New book</h1>
 <!-- form_for部分 -->
-<%= form_for(book) do |f| %>
+    <%= form_for(book) do |f| %>
 
-<% if book.errors.any? %>
-<b><%= book.errors.count %> errors prohibited this book from being saved:</b>
-<ul>
+    <% if book.errors.any? %>
+      <b><%= book.errors.count %> errors prohibited this book from being saved:</b>
 <% book.errors.full_messages.each do |message| %>
 <li><%= message %></li>
 <% end %>
@@ -37,13 +35,10 @@
 <% end %>
 
   <h4>タイトル</h4>
-  <%= f.text_field :title %>
+    <%= f.text_field :title %>
 
   <h4>本文</h4>
-  <%= f.text_area :body %>
-
- <%= f.submit 'Create Book', class: "pull-right" %>
-
-
+    <%= f.text_area :body %>
+    <%= f.submit 'Create Book', class: "pull-right" %>
 <% end %>
-      </div>
+</div>

@@ -20,15 +20,15 @@
 <div class="row">
 <%= link_to edit_user_path(user.id), class: 'btn btn-default btn-lg col-xs-12' do 
  %>   
-     <i class="glyphicon glyphicon-wrench"></i>
+    <i class="glyphicon glyphicon-wrench"></i>
 <% end %>
 </div>
 <h1>New book</h1>
 <!-- form_for部分 -->
-<%= form_for(book) do |f| %>
+  <%= form_for(book) do |f| %>
 
-<% if book.errors.any? %>
-<b><%= book.errors.count %> errors prohibited this book from being saved:</b>
+    <% if book.errors.any? %>
+    <b><%= book.errors.count %> errors prohibited this book from being saved:</b>
 <ul>
 <% book.errors.full_messages.each do |message| %>
 <li><%= message %></li>
@@ -45,4 +45,4 @@
  <%= f.submit 'Create Book', class:'btn btn-primary col-xs-12' %>
 
 <% end %>
-      </div>
+</div>
