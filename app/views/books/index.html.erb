@@ -30,7 +30,7 @@
         <td>
           <%=book.body%>
           <i class="fa fa-comment"></i>
-  <a href="#comments">コメント数 <%= book.book_comments.count %></a>
+            <a href="#comments">コメント数 <%= book.book_comments.count %></a>
           <% if book.favorited_by?(current_user) %>
             <%= link_to book_favorites_path(book.id), method: :delete do %>
               <span>| いいね解除</span>
