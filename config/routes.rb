@@ -21,4 +21,7 @@ Rails.application.routes.draw do
     resources :book_comments, only: [:create, :destroy]
   end
   resources :relationships, only: [:create, :destroy]
+
+  get 'search' => 'searches#search'
+  
 end

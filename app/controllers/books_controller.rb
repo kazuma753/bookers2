@@ -47,6 +47,12 @@ end
       redirect_to books_path
   end
 
+  def search
+    method = params[:search_method]
+    word = params[:search_word]
+    @books = Book.search(method,word)
+end
+
   
 
   private
@@ -58,6 +64,7 @@ end
     @book = Book.find(params[:id])
     if @book.user != current_user
       redirect_to books_path
+      
     end
   end
 end
