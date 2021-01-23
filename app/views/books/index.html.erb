@@ -3,8 +3,8 @@
     	<%= render 'users/list', book:@book,user:current_user %>
     <div class="col-xs-9"> 
 <h2>Books</h2>
- <table class="table">
- 	<thead>
+  <table class="table">
+    <thead>
   	<tr>
 
   		<th>Title</th>
@@ -14,7 +14,6 @@
   </thead>
   <tbody>
     <% @books.each do |book| %>
-    
       <tr>
         <td>
           <%= link_to user_path(book.user) do %>
