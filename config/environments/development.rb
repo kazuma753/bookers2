@@ -59,3 +59,8 @@ Rails.application.configure do
   # routes, locales, etc. This feature depends on the listen gem.
   config.file_watcher = ActiveSupport::EventedFileUpdateChecker
 end
+
+# デフォルトだとlocalhostからアクセスした場合しかbetter_errorsが有効にならないようです。
+# 「0.0.0.0/0」を指定するとすべてのIPが許可される。
+# 自分の環境では endの外に記述したらうまくいった。
+BetterErrors::Middleware.allow_ip! "0.0.0.0/0"
