@@ -21,4 +21,5 @@ Things you may want to cover:
 
 * Deployment instructions
 
-* ...
+<!-- gem better_errors 参考サイト -->
+* https://crieit.net/posts/Rails-gem
