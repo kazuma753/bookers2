@@ -10,11 +10,11 @@
     <h4>name</h4>
     <% if @user.errors.any? %>
 
-<b><%= @user.errors.count %> errors prohibited this user from being saved:</b>
-<ul>
-<% @user.errors.full_messages.each do |message| %>
-<li><%= message + "error" %></li>
-<% end %>
+  <b><%= @user.errors.count %> errors prohibited this user from being saved:</b>
+  <ul>
+  <% @user.errors.full_messages.each do |message| %>
+    <li><%= message + "error" %></li>
+  <% end %>
 <% end %>
 <%= form_for(@user) do |f| %>
   
